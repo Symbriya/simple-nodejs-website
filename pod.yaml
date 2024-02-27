@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-nodejs-website
+spec:
+  containers:
+  - name: simple-nodejs-website
+    image: 01naveen10/simple-nodejs-website:latest
+    ports:
+    - containerPort: 3000
+

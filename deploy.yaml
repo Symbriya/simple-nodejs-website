@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-nodejs-website
+  labels:
+    app: simple-nodejs-website
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-nodejs-website
+  template:
+    metadata:
+      labels:
+        app: simple-nodejs-website
+    spec:
+      containers:
+      - name: simple-nodejs-website
+        image: 01naveen10/simple-nodejs-website:latest
+        ports:
+        - containerPort: 3000
+
+
